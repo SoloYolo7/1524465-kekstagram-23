@@ -44,6 +44,7 @@ const createPhoto = function (photoId) {
  */
 const generatePhotos = function (numberPhotos) {
   const photos = [];
+  
   for (let i = 1; i <= numberPhotos; i++) {
     photos.push(createPhoto(i));
   }
