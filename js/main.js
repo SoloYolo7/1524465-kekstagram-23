@@ -13,4 +13,3 @@ const checkString = function (string, maxLength) {
 
 getRandomInteger(100, 85);
 checkString('any string', 10);
-  
