@@ -1,5 +1,7 @@
 import { isEscEvent } from './util.js';
 
+const COMMENTS_LOAD_STEP = 5;
+
 const bigPicture = document.querySelector('.big-picture');
 const bigPictureImg = document.querySelector('.big-picture__img img');
 const likesCount = document.querySelector('.likes-count');
@@ -13,7 +15,6 @@ const socialCaption = document.querySelector('.social__caption');
 const commentCount = document.querySelector('.social__comment-count');
 const commentsLoader = document.querySelector('.comments-loader');
 
-const COMMENTS_LOAD_STEP = 5;
 
 function removeComments() {
   Array.from(commentsList.children).forEach((child) => {

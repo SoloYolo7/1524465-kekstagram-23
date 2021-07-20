@@ -14,7 +14,7 @@ function sortByCommentsLength(photos) {
   return photos.slice().sort((left, right) => right.comments.length - left.comments.length);
 }
 
-function randomTenPhotos(photos) {
+function getRandomTenPhotos(photos) {
   return shuffle(photos).slice(0, 10);
 }
 
@@ -28,7 +28,7 @@ getPhotos((photos) => {
         renderPhotos(photos);
         break;
       case 'filter-random':
-        renderPhotos(randomTenPhotos(photos));
+        renderPhotos(getRandomTenPhotos(photos));
         break;
       case 'filter-discussed':
         renderPhotos(sortByCommentsLength(photos));
